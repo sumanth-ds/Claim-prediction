@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+
+</head>
+<body>
+        
+        <div id="h2">Project Title: </div>
+        <div id="h3">Predictive Modeling for Insurance Claim Probability Based on Comprehensive Car Policy Features and Safety Ratings</div>
+        <form method="post" action="predict">
+            <div id="title">Prediction Form</div>
+            {% csrf_token %}
+            <input id="input" type="text" name="Age_of_car" placeholder="Age_of_car">
+            <input id="input" type="text" name="age_of_policyholder" placeholder="age_of_policyholder">
+            <input id="input" type="text" name="policy_tenure" placeholder="policy_tenure">
+            <input id="input" type="text" name="area_cluster" placeholder="area_cluster">
+            <input id="input" type="text" name="population_density" placeholder="population_density">
+
+            <button type="submit">Submit</button>
+        </form>
+<p> {{ predict }}
+    {{ error }}</p>
+    </body>
+    </html>
+    
+
+    <!-- <form action="" method="post">
+        {% csrf_token %}
+        <div> <label for="id">id</label>
+            <input type="number" placeholder="Enter the id" required id="id" name="id">
+        </div>
+        
+        <div> <label for="user_id">user_id</label>
+            <input type="number" placeholder="Enter the user_id" required name="user_id">
+        </div>
+        
+       
+        <div> <label for="vehicle_model_id">vehicle_model_id</label>
+            <input type="number" placeholder="Enter the vehicle_model_id" required name="vehicle_model_id">
+        </div>
+        
+       
+        <div> <label for="package_id">package_id</label>
+            <input type="number" placeholder="Enter the package_id" required name="package_id ">
+        </div>
+        
+       
+        <div> <label for="travel_type_id">travel_type_id</label>
+            <input type="number" placeholder="Enter the travel_type_id" required name="travel_type_id">
+        </div>
+        
+       
+        <div> <label for="from_area_id">from_area_id</label>
+            <input type="number" placeholder="Enter the from_area_id" required name="from_area_id">
+        </div>
+        
+       
+        <div> <label for="to_area_id">to_area_id</label>
+            <input type="number" placeholder="Enter the to_area_id" required name="to_area_id">
+        </div>
+        
+       
+        <div> <label for="from_city_id">from_city_id</label>
+
+            <input type="number" placeholder="Enter the from_city_id" required name="from_city_id">
+        </div>
+        
+       
+        <div> <label for="to_city_id">to_city_id</label>
+
+            <input type="number" placeholder="Enter the to_city_id" required name="to_city_id">
+        </div>
+        
+       
+        <div> <label for="from_date">from_date</label>
+            <input type="date" placeholder="Enter the from_date" required name="from_date">
+        </div>
+        
+       
+        <div> <label for="online_booking">online_booking</label>
+            <input type="number" placeholder="Enter the online_booking" required name="online_booking">
+        </div>
+        
+       
+        <div> <label for="mobile_site_booking">mobile_site_booking</label>
+            <input type="number" placeholder="Enter the mobile_site_booking" required name="mobile_site_booking">
+        </div>
+        
+       
+        <div> <label for="booking_created">booking_created</label>
+            <input type="datetime-local" placeholder="Enter the booking_created" required name="booking_created">
+        </div>
+        
+       
+        <div> <label for="from_lat">from_lat</label>
+            <input type="number" placeholder="Enter the from_lat" required name="from_lat">
+        </div>
+        
+       
+        <div> <label for="from_long">from_long</label>
+            <input type="number" placeholder="Enter the from_long" required name="from_long">
+        </div>
+        
+
+        <div> <label for="to_lat">to_lat</label>
+            <input type="number" placeholder="Enter the to_lat" required name="to_lat">
+        </div>
+        
+       
+        <div> <label for="to_long">to_long</label>
+            <input type="number" placeholder="Enter the to_long" required name="to_long">
+        </div>
+        
+        <div><input type="submit"></div>
+
+    </form>
+
+    {{ predict }} -->
+<!-- 
+</body>
+</html> -->
