@@ -27,4 +27,4 @@ jobs:
         pip install -r config/requirements.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python config/manage.py test
